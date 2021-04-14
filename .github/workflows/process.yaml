@@ -15,7 +15,7 @@ jobs:
           node-version: 12.x              
         
       - name: Run Capture
-        run: nexrender-cli-macos --file MyJob.json
+        run: ./nexrender-cli-macos --file MyJob.json
         
       # Add new files in data folder, commit along with other modified files, push
       - name: Commit and push if it changed
