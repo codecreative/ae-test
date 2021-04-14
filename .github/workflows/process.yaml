@@ -12,21 +12,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-          
-      - name: Cache Node Modules
-        id: cache-node-modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-          
-      - name: Install Dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != 'true__'
-        run: npm install -g @nexrender/cli @nexrender/action-copy @nexrender/action-encode
+          node-version: 12.x              
         
       - name: Run Capture
-        run: nexrender-cli --file MyJob.json
+        run: nexrender-cli-macos --file MyJob.json
         
       # Add new files in data folder, commit along with other modified files, push
       - name: Commit and push if it changed
