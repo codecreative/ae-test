@@ -1,4 +1,4 @@
-name: newsminder
+name: rendertest
 
 on:
   workflow_dispatch:
