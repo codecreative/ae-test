@@ -24,8 +24,8 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
           
       - name: Install Dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm install
+        if: steps.cache-node-modules.outputs.cache-hit != 'true__'
+        run: npm install -g @nexrender/cli @nexrender/action-copy @nexrender/action-encode
         
       - name: Run Capture
         run: nexrender-cli --file MyJob.json
