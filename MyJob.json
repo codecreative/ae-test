@@ -1,6 +1,6 @@
 {
     "template": {
-        "src": "file:///Users/byron/projects/codecreative/ae-test/MyProject.aep",
+        "src": "https://github.com/codecreative/ae-test/raw/main/MyProject.aep",
         "composition": "Main"
     },
     "assets": [
@@ -8,7 +8,7 @@
             "type": "data",
             "layerName": "MyText",
             "property": "Source Text",
-            "value": "Hello world!!!"
+            "value": "Hello world from GitHub!!!"
         }
     ],
     "actions":{
