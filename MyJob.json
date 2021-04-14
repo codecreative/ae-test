@@ -1,0 +1,28 @@
+{
+    "template": {
+        "src": "file:///Users/byron/projects/codecreative/ae-test/MyProject.aep",
+        "composition": "Main"
+    },
+    "assets": [
+        {
+            "type": "data",
+            "layerName": "MyText",
+            "property": "Source Text",
+            "value": "Hello world!!!"
+        }
+    ],
+    "actions":{
+        "postrender": [
+            {
+                "module": "@nexrender/action-encode",
+                "preset": "mp4",
+                "output": "encoded.mp4"
+            },
+            {
+                "module": "@nexrender/action-copy",
+                "input": "encoded.mp4",
+                "output": "/Users/byron/projects/codecreative/ae-test/myresult.mp4"
+            }
+        ]
+    }
+}
