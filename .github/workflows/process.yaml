@@ -2,8 +2,6 @@ name: rendertest
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '6 9,14,18,23 * * *'
 
 jobs:
   run-newsminder:
